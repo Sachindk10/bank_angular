@@ -7,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit {
   placeholderData = "Account number"
+  uname:any
+  psw:any
   constructor() { }
 
   ngOnInit(): void {
   }
-  login () {
-    alert("login clicked")
+  login (a:any, b:any) {
+    this.uname = a.value;
+    this.psw = b.value;
+    console.log(this.uname, this.psw);
+    
+    alert("Login Clicked")
   }
 
-  unameChange(event:any) {
-    console.log(event.target.value);
-
-  }
 }
