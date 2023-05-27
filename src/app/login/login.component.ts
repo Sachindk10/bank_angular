@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,16 +10,15 @@ export class LoginComponent implements OnInit {
   placeholderData = "Account number"
   uname:any
   psw:any
+
   constructor() { }
 
   ngOnInit(): void {
   }
-  login (a:any, b:any) {
-    this.uname = a.value;
-    this.psw = b.value;
+  login () {
+
     console.log(this.uname, this.psw);
     
-    alert("Login Clicked")
   }
 
 }

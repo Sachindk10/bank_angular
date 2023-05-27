@@ -4,13 +4,13 @@
         <h1 class="text-center mt-5  text-primary">Sign In</h1>
     <form class="border text-center container mt-2 p-3"  style="border-radius: 20px; background-color: rgb(69, 80, 101);">
         <div class="p-2 mt-2">
-            <input #uname [placeholder]="placeholderData" type="text" id="uName" class="form-control">
+            <input [(ngModel)]="uname" [placeholder]="placeholderData" type="text" id="uName" name="una" class="form-control">
         </div>
         <div class="p-2 mt-2">
-            <input #psw type="password" name="" id="passw" class="form-control" placeholder="Password">
+            <input [(ngModel)]="psw" type="password" name="pas" id="passw" class="form-control" placeholder="Password">
         </div>
 
-            <button (click) = 'login(uname, psw)' type="submit" class="btn btn-success mt-4 p-2">login</button>
+            <button (click) = 'login()' type="submit" class="btn btn-success mt-4 p-2">login</button>
 
         <p class="mt-2" style="color: rgb(250, 250, 250);">don't have account?
             <a style="text-decoration: none; color: rgb(250, 250, 250);" routerLink="register">
